@@ -19,6 +19,14 @@ class Ride
     visitor.spending_money >= @admission_fee
     visitor.spending_money -= 1
     @rider_log[visitor] += 1
-
   end
+
+  def total_revenue
+    if @rider_log == {} 
+      0
+    else
+      @rider_log.values.sum * admission_fee
+    end
+  end 
+
 end
