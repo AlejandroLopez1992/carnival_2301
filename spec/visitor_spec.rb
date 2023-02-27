@@ -16,4 +16,10 @@ RSpec.describe Visitor do
   expect(visitor1.preferences).to eq([])
   end
 
+  it '#add_preference to preferance array' do
+  visitor1.add_preference(:gentle)
+  expect(visitor1.preferences).to eq([:gentle])
+  visitor1.add_preference(:water)
+  expect(visitor1.preferences).to eq([:gentle, :water])
+  end
 end
