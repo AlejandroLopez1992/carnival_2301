@@ -5,6 +5,10 @@ class Visitor
               :spending_money,
               :preferences
 
-  def initialize
+  def initialize(name, height, spending_money)
+    @name = name
+    @height = height
+    @spending_money = spending_money.delete_prefix("$").to_i
+    @preferences = []
   end
 end
