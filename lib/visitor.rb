@@ -16,5 +16,7 @@ class Visitor
     @preferences << preferance
   end
 
-  
+  def tall_enough?(needed_height)
+    @height >= needed_height
+  end
 end
