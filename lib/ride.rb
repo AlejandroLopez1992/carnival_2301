@@ -1,3 +1,4 @@
 class Ride
  
+  
 end
